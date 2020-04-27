@@ -17,6 +17,12 @@ returns { a: 1, c: 42};
 */
 
 function pluck(obj, elements) {
+  let newObj={}
+  elements.forEach((el)=> {
+  
+  newObj[el]===obj[el]
+  })
+  return newObj
   // YOUR CODE
 }
 
