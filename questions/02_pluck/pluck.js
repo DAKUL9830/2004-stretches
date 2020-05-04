@@ -7,6 +7,14 @@ const obj1 = { a: 1, b: true };
 pluck(obj1, ['a']));
 returns  { a: 1};
 
+newObj={}
+
+elements.forEach(elem=>{
+  if(obj.elem!==undefined){
+    obj.elem===newObj.elem
+  }
+})
+
 const obj2 = { a: 1, b: true, c: 42 };
 pluck(obj2, ['a', 'c']));
 returns { a: 1, c: 42};
@@ -19,8 +27,8 @@ returns { a: 1, c: 42};
 function pluck(obj, elements) {
   let newObj={}
   elements.forEach((el)=> {
-  
-  newObj[el]===obj[el]
+  if(obj[el]!== undefined)
+  obj[el] = newObj[el]
   })
   return newObj
   // YOUR CODE
