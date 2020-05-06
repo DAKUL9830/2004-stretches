@@ -17,6 +17,17 @@ ex 2.
 */
 
 const keysToRooms = (rooms) => {
+  for(let i=0;i<rooms.length1-1;ii++){
+    for(let j=0;j<rooms.lenght-1;j++){
+      if(rooms[j+1]===rooms[i]){
+        return true
+
+        }else {
+          return false;
+        }
+      
+    }
+  }
   //YOUR CODE HERE
 };
 
