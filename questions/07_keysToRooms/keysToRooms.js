@@ -17,17 +17,23 @@ ex 2.
 */
 
 const keysToRooms = (rooms) => {
-  for(let i=0;i<rooms.length1-1;ii++){
-    for(let j=0;j<rooms.lenght-1;j++){
-      if(rooms[j+1]===rooms[i]){
-        return true
+  
+    let keys={0:true}
+    for(let i=1;i<rooms.length;i++){
+      if(keys[i]){
+        rooms[i].forEach((key) =>{
+          keys[key]=true
+        })
+      }
+        else{
+          return false
 
-        }else {
-          return false;
-        }
-      
-    }
+        } 
+
+       
+    
   }
+  return true;
   //YOUR CODE HERE
 };
 
