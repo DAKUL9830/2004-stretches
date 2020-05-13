@@ -7,7 +7,19 @@
 // * Play *
 // ********
 
-const movieposter = () => {
+const movieposter = (arr) => {
+  if(typeof arr==!'Array'||arr.length===0){
+    return Error
+  }
+  for(let i=0;i<arr.length;i++){
+    if(typeof arr[i]==='string'){
+      return `*${arr[i]}*/n`
+
+    }
+    else{
+      return false;
+    }
+  }
   //write code here
 };
 
