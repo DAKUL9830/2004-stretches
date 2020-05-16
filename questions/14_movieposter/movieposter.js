@@ -8,19 +8,15 @@
 // ********
 
 const movieposter = (arr) => {
-  if(typeof arr==!'Array'||arr.length===0){
-    return Error
-  }
+  const longestWord= arr.reduce(acc,item=>{
+    if (item.length>acc){
+      acc=item.length
+    }
+    
+  },0)
   for(let i=0;i<arr.length;i++){
-    if(typeof arr[i]==='string'){
-      return `*${arr[i]}*/n`
-
-    }
-    else{
-      return false;
-    }
+    return 
   }
-  //write code here
 };
 
 module.exports = { movieposter };
