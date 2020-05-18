@@ -8,6 +8,10 @@ zip([
 */
 
 function zip(objs) {
+  
+  const newObj=objs.reduce((acc,item)=>{
+    Object.entries(item).forEach()
+  })
   // YOUR CODE
 }
 
