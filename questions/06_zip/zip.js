@@ -9,8 +9,13 @@ zip([
 
 function zip(objs) {
   
-  const newObj=objs.reduce((acc,item)=>{
-    Object.entries(item).forEach()
+  objs.reduce((obj,item)=>{
+    Object.entries(item).forEach(([key,value])=>{
+      if(key[i]===key[i+1]){
+        
+      }
+
+    })
   })
   // YOUR CODE
 }
