@@ -21,16 +21,24 @@
 
 const getrootvalue = (obj,num) => {
 
-   return obj.reduce((acc,item)=>{
+   /*return obj.reduce((acc,item)=>{
         Object.entries(item).forEach((value)=>{
             if(value===num){
                 acc=item
             }
     })
     return acc;
-});
+});*/
 
-
+  for(let i in obj){
+      if(typeof obj[i]==="object"&&!Array.isArray(obj[i])){
+          if(getrootvalue(obj[i],num)){
+          return i;
+          }
+      }else if(obj[i].includes(num)){
+        return i;
+    }
+  }return null;
 }
 
 module.exports = { getrootvalue };
