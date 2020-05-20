@@ -9,14 +9,18 @@ zip([
 
 function zip(objs) {
   
-  objs.reduce((obj,item)=>{
-    Object.entries(item).forEach(([key,value])=>{
-      if(key[i]===key[i+1]){
+  objs.reduce((acc,obj)=>{
+    Object.entries(obj).forEach(([key,value])=>{
+      if(acc[key]){
+         acc+=value
         
+      }else{
+        acc[key]=value;
       }
 
     })
-  })
+    return acc;
+  },{})
   // YOUR CODE
 }
 
